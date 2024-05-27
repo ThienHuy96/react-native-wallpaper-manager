@@ -1,48 +1,59 @@
+# React Native Device Wallpaper Manager
 
-# react-native-device-wallpaper-manager
-React Native New Architecture - device wallpaper setter library (Android only), backed with Coil and Coroutine.
-+ 🐎 New Architecture
-+ ⚡ Using light-weight thread
-+ 🏎 Kotlin implement
+Enhance your Android app with the ability to set wallpapers effortlessly using the React Native New Architecture. This library is optimized for performance, utilizing Kotlin and light-weight threads for a seamless experience.
 
-## Installation
+## Features
 
-### Adding the package
+- 🐎 **Built with the New Architecture** for better performance and scalability.
+- ⚡ **Efficient threading** using light-weight processes.
+- 🏎 **Implemented in Kotlin** for a robust and type-safe codebase.
 
-#### npm
+## Getting Started
+
+### Installation
+
+You can add `react-native-device-wallpaper-manager` to your project using npm or yarn:
+
+#### With npm:
 
 ```bash
-$ npm install react-native-device-wallpaper-manager
+npm install react-native-device-wallpaper-manager
 ```
 
-#### yarn
+#### With yarn:
 
 ```bash
-$ yarn add react-native-device-wallpaper-manager
+yarn add react-native-device-wallpaper-manager
 ```
 
+### API Reference
 
-### .setWallpaper Props
+#### `setWallpaper` Method
 
-|Prop|Type|Description|Note|
-|-|-|-|-|
-|**destination**|string| type of wallpaper|"system", "both", "lock"|
-|**imageUri**|string|path to image (remote or local uri are acceptable)|"http://", "https://", "file://"|
+Set the wallpaper of your device with just a few lines of code. The method accepts the following properties:
 
+| Property      | Type   | Description                         | Accepted Values                          |
+| ------------- | ------ | ----------------------------------- | ---------------------------------------- |
+| `destination` | String | The wallpaper target on the device. | "system", "both", "lock"                 |
+| `imageUri`    | String | The URI path to the desired image.  | Remote (http/https) or local (file) URIs |
 
-### Example
+### Usage Example
+
+Here's a quick example to get you started:
 
 ```typescript
-import RTNDeviceWallpaper from 'react-native-device-wallpaper-manager/js/NativeDeviceWallpaper'
+import RTNDeviceWallpaper from "react-native-device-wallpaper-manager/js/NativeDeviceWallpaper";
 
-const setWallpaper=async()=>{
-    await RTNDeviceWallpaper?.setWallpaper("https://example_website/example_image.png","both")
-}
+const setWallpaper = async () => {
+  await RTNDeviceWallpaper?.setWallpaper(
+    "https://your_image_url_here.png",
+    "both"
+  );
+};
 ```
 
-### Demo
+### Visual Demo
 
-![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExanF5YzVpZG5ncmNqanp2aW81eW14aTcwdmNyMzBlcmhlcjVjNHduMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FpMJDFkj6mNzu600eN/giphy.gif)
+Get a glimpse of what you can achieve with the `react-native-device-wallpaper-manager`:
 
-
-
+![Device Wallpaper Manager Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExanF5YzVpZG5ncmNqanp2aW81eW14aTcwdmNyMzBlcmhlcjVjNHduMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FpMJDFkj6mNzu600eN/giphy.gif)
